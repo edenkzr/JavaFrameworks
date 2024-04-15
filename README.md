@@ -3,14 +3,23 @@
 # WESTERN GOVERNOR UNIVERSITY 
 ## D287 – JAVA FRAMEWORKS
 
-C.  Customized the mainscreen.html on line 14 changing the title to "My Guitar Shop" to better reflect the customers
-products and changed lines 21 and 53 subheadings to "Components" and "Instruments" respectively for clarification
-on the kinds of products offered.
+C.  Mainscreen.html, line 14, changed the title to "My Guitar Shop".
+    Mainscreen.html, line 21, changed subheading to "Components".
+    Mainscreen.html, line 53, changed subheading to "Instruments".
 
-Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
-
-
-D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+D.  src/main/resources/templates, Added an about.html.
+    about.html, line 6, copy-pasted the same css styling from mainscreen.html. 
+    about.html, line 8, created title "About Us - My Guitar Shop".
+    about.html, line 2, created subheading "About us".
+    about.html, line 14, created a paragraph for the about statement.
+    about.html, line  17, created button that redirects user back to the mainscreen.html similar to buttons used in that
+    page.
+    mainscreen.html, line 89, created similar button that sends user to about.html.
+    src/main/java/controllers, created AboutController class.
+    AboutController, line 6, annotate class as a Controller.
+    AboutController, line 7, created public class AboutController.
+    AboutController, line 8, annotate as GetMapping.
+    AboutController, line 9, defined class to return "about" string.
 
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
