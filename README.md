@@ -22,8 +22,11 @@ D.  src/main/resources/templates, Added an about.html.
     AboutController, line 9, defined class to return "about" string.
 
 
-E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
-
+E. bootstrapdata, line 40, added if statement to check if repositories were empty
+   bootstrapdata, lines 42 - 70, added outsourcedParts
+   bootstrapdata, lines 72 - 76, saved parts to repository
+   bootstrapdata, lines 82 - 86, added products
+   bootstrapdata, lines 88 - 92, saveds products to repository
 
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
 
