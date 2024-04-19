@@ -28,13 +28,18 @@ E. bootstrapdata, line 40, added if statement to check if repositories were empt
    bootstrapdata, lines 82 - 86, added products
    bootstrapdata, lines 88 - 92, saveds products to repository
 
-Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
 
-
-F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
-•  The “Buy Now” button must be next to the buttons that update and delete products.
-•  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
-•  Display a message that indicates the success or failure of a purchase.
+F. ProductService.java, line 20, declared DecrementProductInventory()
+   ProductServiceImpl.java, lines 70 to 83, defined DecrementProductInventory()
+   src/main/java/controllers, created BuyController
+   BuyController, lines 9 to 24, created and annotated BuyController class along
+   with the buyProduct method if-else with PostMapping
+   src/main/resources/templates, created confirmation.html and error.html
+   confirmation.html, line 8 - 12, created Title, heading and body contents
+   confirmation.html, line 13, created button back to mainscreen.html
+   error.html, line 8 - 12, created Title, heading and body contents
+   error.html, line 13, created button back to mainscreen.html
+   mainscreen.html, lines 82 - 85, added Buy Now button form
 
 
 G.  Modify the parts to track maximum and minimum inventory by doing the following:
