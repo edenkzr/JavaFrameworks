@@ -44,30 +44,40 @@ public class BootStrapData implements CommandLineRunner {
             outsourcedBody.setName("Body");
             outsourcedBody.setInv(5);
             outsourcedBody.setPrice(100.0);
+            outsourcedBody.setMinInv(1);
+            outsourcedBody.setMaxInv(50);
 
             OutsourcedPart outsourcedBridge = new OutsourcedPart();
             outsourcedBridge.setCompanyName("BridgeBrilliance");
             outsourcedBridge.setName("Bridge");
             outsourcedBridge.setInv(7);
             outsourcedBridge.setPrice(30.0);
+            outsourcedBridge.setMinInv(1);
+            outsourcedBridge.setMaxInv(50);
 
             OutsourcedPart outsourcedPaint = new OutsourcedPart();
             outsourcedPaint.setCompanyName("Picasso");
             outsourcedPaint.setName("Paint");
             outsourcedPaint.setInv(10);
             outsourcedPaint.setPrice(50.0);
+            outsourcedPaint.setMinInv(1);
+            outsourcedPaint.setMaxInv(50);
 
             OutsourcedPart outsourcedNeck = new OutsourcedPart();
             outsourcedNeck.setCompanyName("Customs-R-us");
             outsourcedNeck.setName("Neck");
             outsourcedNeck.setInv(3);
             outsourcedNeck.setPrice(40.0);
+            outsourcedNeck.setMinInv(1);
+            outsourcedNeck.setMaxInv(50);
 
             OutsourcedPart outsourcedPickup = new OutsourcedPart();
             outsourcedPickup.setCompanyName("Pick-N-Play");
             outsourcedPickup.setName("Pick-up");
             outsourcedPickup.setInv(5);
             outsourcedPickup.setPrice(25.0);
+            outsourcedPickup.setMinInv(1);
+            outsourcedPickup.setMaxInv(50);
 
             outsourcedPartRepository.save(outsourcedBody);
             outsourcedPartRepository.save(outsourcedBridge);

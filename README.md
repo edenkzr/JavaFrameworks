@@ -22,32 +22,44 @@ D.  src/main/resources/templates, Added an about.html.
     AboutController, line 9, defined class to return "about" string.
 
 
-E. bootstrapdata, line 40, added if statement to check if repositories were empty
-   bootstrapdata, lines 42 - 70, added outsourcedParts
-   bootstrapdata, lines 72 - 76, saved parts to repository
-   bootstrapdata, lines 82 - 86, added products
-   bootstrapdata, lines 88 - 92, saveds products to repository
+E.  bootstrapdata, line 40, added if statement to check if repositories were empty
+    bootstrapdata, lines 42 - 70, added outsourcedParts
+    bootstrapdata, lines 72 - 76, saved parts to repository
+    bootstrapdata, lines 82 - 86, added products
+    bootstrapdata, lines 88 - 92, saveds products to repository
 
 
-F. ProductService.java, line 20, declared DecrementProductInventory()
-   ProductServiceImpl.java, lines 70 to 83, defined DecrementProductInventory()
-   src/main/java/controllers, created BuyController
-   BuyController, lines 9 to 24, created and annotated BuyController class along
-   with the buyProduct method if-else with PostMapping
-   src/main/resources/templates, created confirmation.html and error.html
-   confirmation.html, line 8 - 12, created Title, heading and body contents
-   confirmation.html, line 13, created button back to mainscreen.html
-   error.html, line 8 - 12, created Title, heading and body contents
-   error.html, line 13, created button back to mainscreen.html
-   mainscreen.html, lines 82 - 85, added Buy Now button form
+F.  ProductService.java, line 20, declared DecrementProductInventory()
+    ProductServiceImpl.java, lines 70 to 83, defined DecrementProductInventory()
+    src/main/java/controllers, created BuyController
+    BuyController, lines 9 to 24, created and annotated BuyController class along
+    with the buyProduct method if-else with PostMapping
+    src/main/resources/templates, created confirmation.html and error.html
+    confirmation.html, line 8 - 12, created Title, heading and body contents
+    confirmation.html, line 13, created button back to mainscreen.html
+    error.html, line 8 - 12, created Title, heading and body contents
+    error.html, line 13, created button back to mainscreen.html
+    mainscreen.html, lines 82 - 85, added Buy Now button form
 
 
-G.  Modify the parts to track maximum and minimum inventory by doing the following:
-•  Add additional fields to the part entity for maximum and minimum inventory.
-•  Modify the sample inventory to include the maximum and minimum fields.
-•  Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
-•  Rename the file the persistent storage is saved to.
-•  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+G.  part.java, lines 32 - 33, created Int minInv member and set a constraint/message
+    to limit how low it can be set.
+    part.java, lines 34 - 35, created Int maxInv member and set a constraint/message
+    to limit for big it can be set.
+    part.java, lines 58 - 65, created new overloaded constructor that includes minInv and MaxInv
+    part.java, lines 97 - 109, generated getters and setters for minInv and maxInv
+    inhousePartForm.html, lines 24 - 28, added fields for minInv and maxInv user inputs
+    OutsourcedPartForm.html, lines 25 - 29, added fields for minInv and maxInv user inputs
+    application.properties, renamed database
+    addOutsourcedPartController.java, lines 43 - 45, added custom validation logic that checks
+    inventory is in between the set minInv and maxInv range
+    AddinhousePartController.java, lines 42 - 44, added custom validation logic that checks
+    inventory is in between the set minInv and maxInv range
+    BootStrapData.java, Lines 47 - 48, added values minInv and maxInv to the sample inventory
+    BootStrapData.java, Lines 55 - 56, added values minInv and maxInv to the sample inventory
+    BootStrapData.java, Lines 63 - 64, added values minInv and maxInv to the sample inventory
+    BootStrapData.java, Lines 71 - 72, added values minInv and maxInv to the sample inventory
+    BootStrapData.java, Lines 79 - 80, added values minInv and maxInv to the sample inventory
 
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
