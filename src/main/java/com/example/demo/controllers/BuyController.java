@@ -18,7 +18,7 @@ public class BuyController {
         if (success) {
             return "confirmation"; // Redirect to confirmation page
         } else {
-            return "error"; // Redirect to error page
+            return "failure"; // Redirect to error page
         }
     }
 }
