@@ -41,6 +41,13 @@ public class AddInhousePartController{
         theModel.addAttribute("inhousepart",part);
         if (part.getInv() < part.getMinInv() || part.getInv() > part.getMaxInv()) {
             theBindingResult.rejectValue("inv", "inventory.range", "Inventory value must be between " + part.getMinInv() + " and " + part.getMaxInv());
+            if (part.getInv() < part.getMinInv()) {
+
+                theBindingResult.rejectValue("inv", "inventory.low", "Inventory value is too low");
+            } else {
+
+                theBindingResult.rejectValue("inv", "inventory.high", "Inventory value is too high");
+            }
         }
         if(theBindingResult.hasErrors()){
             return "InhousePartForm";

@@ -62,11 +62,12 @@ G.  part.java, lines 32 - 33, created Int minInv member and set a constraint/mes
     BootStrapData.java, Lines 79 - 80, added values minInv and maxInv to the sample inventory
 
 
-H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
-•  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
-•  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
-•  Display error messages when adding and updating parts if the inventory is greater than the maximum.
-
+H.  AddinhousePartController.java, Lines 44 - 50, added if else statement logic to specialize
+    the error messages given depending on what went wrong.
+    AddOutsourcedPartController.java, Lines 45 - 51, added if else statement logic to specialize
+    the error messages given depending on what went wrong.
+    EnufPartsValidator.java, Lines 36 - 37, added additional if statement that checks if part inventory
+    would dip below minInv and returns false if so.
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 

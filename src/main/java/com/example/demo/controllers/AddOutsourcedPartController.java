@@ -42,6 +42,13 @@ public class AddOutsourcedPartController {
         theModel.addAttribute("outsourcedpart",part);
         if (part.getInv() < part.getMinInv() || part.getInv() > part.getMaxInv()) {
             bindingResult.rejectValue("inv", "inventory.range", "Inventory value must be between " + part.getMinInv() + " and " + part.getMaxInv());
+            if (part.getInv() < part.getMinInv()) {
+
+                bindingResult.rejectValue("inv", "inventory.low", "Inventory value is too low");
+            } else {
+
+                bindingResult.rejectValue("inv", "inventory.high", "Inventory value is too high");
+            }
         }
         if(bindingResult.hasErrors()){
             return "OutsourcedPartForm";
