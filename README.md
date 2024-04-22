@@ -72,4 +72,6 @@ H.  AddinhousePartController.java, Lines 44 - 50, added if else statement logic 
 I.  PartTest.java, Lines 104 - 138, Created tests for the newly created minInv and maxInv fields
     using @test annotaions and assertations (assertEquals) for comparisons on expected outcomes
 
-J.  Remove the class files for any unused validators in order to clean your code.
+J.  src/main/java/com.example.demo/validators, removed class with no usages and annotation file
+    with no validating logic
+    Part.java, deleted import statement and @annotation for deleted said annotation file
