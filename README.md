@@ -69,7 +69,7 @@ H.  AddinhousePartController.java, Lines 44 - 50, added if else statement logic 
     EnufPartsValidator.java, Lines 36 - 37, added additional if statement that checks if part inventory
     would dip below minInv and returns false if so.
 
-I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
-
+I.  PartTest.java, Lines 104 - 138, Created tests for the newly created minInv and maxInv fields
+    using @test annotaions and assertations (assertEquals) for comparisons on expected outcomes
 
 J.  Remove the class files for any unused validators in order to clean your code.
